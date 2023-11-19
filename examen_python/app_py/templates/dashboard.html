@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/dashboard.css' ) }}">
+</head>
+<body> 
+    <div class="header">
+        <div class="title">
+            <h1>welcome {{usuario.first_name}} {{usuario.last_name}}!</h1> 
+        </div>
+        <div class="links">
+            <a class="edit_account" href="/edit_user">Edit My Account</a>
+            <a class="logout" href="/delete_session">logout</a>
+        </div>
+    </div>
+    <div class="main">
+        <div class="quotes">
+            <h2 class="titulo2">Quotes</h2>
+            {% if quotes %}
+                {% for quote, autor, first_name, last_name in quotes %}
+                    <div class="quote">
+                            <p>{{autor}}: "{{quote}}".</p>
+                            <p>Posted by <a href="/userquotes">{{first_name}} {{last_name}}</a></p>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <div class="formulario">
+            <div class="titulo">
+                <h4>Add a Quote!</h4>
+            </div>
+            <div class="form_content">
+                <form action="/create_quote" method="post">
+                    <div class="form">
+                        <label for="autor">autor</label>
+                        <input type="text" name="autor">
+                    </div>
+                    <div class="form_2">
+                        <label for="quote">quote</label>
+                        <input type="text" name="quote">
+                    </div>
+                <div class="button">
+                    <button type="submit">submit</button>
+                </div>
+                </form>
+            </div>
+        </div>
+</body>
+</html>
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/logins.css')}}">
+    <title>login</title>
+</head>
+<body>
+    <div class="main">
+        <div class="registro">
+            <h1>Register</h1>
+            <form action="/crear_usuario" method="post">
+                {% with messages = get_flashed_messages(category_filter=['registro']) %}
+                    {% if messages %}
+                    <div class="error_registro">
+                        {% for message in messages %}
+                            <p>{{message}}</p>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                {% endwith %}
+                <div class="inplab">
+                    <label for="first_name">first name</label>
+                    <input type="text" name="first_name" required>
+                </div>
+                <div class="inplab">
+                    <label for="last_name">last name</label>
+                    <input type="text" name="last_name" required>
+                </div>
+                <div class="inplab">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" required>
+                </div>
+                <div class="inplab">
+                    <label for="pasword">password</label>
+                    <input type="password" name="pasword" required>
+                </div>
+                <div class="inplab">
+                    <label for="c_password">Confirm pw</label>
+                    <input type="password" name="c_password" required>
+                </div>
+                <div class="button1">
+                    <button type="submit">Registrarse</button>
+                </div>
+            </form>
+        </div>
+        <div class="login">
+            <h1>login</h1>
+            <form action="/iniciar_sesion" method="post">
+                {% with messages = get_flashed_messages(category_filter=['login']) %}
+                    {% if messages %}
+                    <div class="error_registro">
+                        {% for message in messages %}
+                            <p>{{message}}</p>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                {% endwith %}
+                <div>
+                    <div class="inplab">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="inplab">
+                        <label for="password">Contraseña:</label>
+                        <input type="password" name="pasword" required>
+                    </div>
+                    <div class="button2">
+                        <button type="submit">Iniciar sesion</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

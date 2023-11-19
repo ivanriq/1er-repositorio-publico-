@@ -1,0 +1,50 @@
+.main{
+    margin: 10px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logout{
+    width: 65px;
+    background-color: white;
+    border: 2px solid black;
+    box-shadow: 2px 2px 0 0 black;
+    text-align: center;
+    text-decoration: none;
+}
+
+.content_form{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: -1090px;
+}
+
+.form_1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form_2{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1px;
+}
+
+.form_3{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1px
+}
+
+.button{
+    margin-top: 5px;
+    margin-left: 70px;
+}
+

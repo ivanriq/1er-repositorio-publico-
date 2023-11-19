@@ -1,0 +1,81 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logout{
+    width: 65px;
+    background-color: white;
+    border: 2px solid black;
+    box-shadow: 2px 2px 0 0 black;
+    text-align: center;
+    text-decoration: none;
+}
+
+.quote{
+border: 2px solid black;
+width: 200px;
+margin-left: 15px;
+}
+
+.formulario{
+    margin-top: -100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 1000px;
+}
+
+
+.quotes{
+    margin-left: 15px;
+    width: 200px;
+    text-align: center;
+}
+
+.titulo{
+    margin-left: 25px;
+}
+
+.titulo2{
+    margin-left: 15px;
+}
+
+.form{
+    margin-top: -5px;
+    margin-left: 130px;
+    width: 200px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.button{
+    margin-top: 5px;
+    margin-left: 140px;
+}
+
+.form_2{
+    margin-top: 5px;
+    margin-left: 130px;
+    width: 200px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.like-container{
+    display: flex;
+    align-items: center;
+}
+
+.boton{
+    margin-top: -15px;
+    margin-left: 25px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

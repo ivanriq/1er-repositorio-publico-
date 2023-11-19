@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/edit_account.css' ) }}">
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="title">
+                <h2>Edit My Account</h2>
+            </div>
+            <div class="link">
+                <a class="edit_back" href="/back_page">Back</a>
+                <a class="logout" href="/delete_session" method="POST">logout</a>
+            </div>
+        </div>
+        <div class="content_form">
+            <form action="/edit_acc/{{usuario['id_usuario']}}" method= "post">
+                <div class="form_1">
+                    <label for="first_name">first name</label>
+                    <input type="text" name="first_name"required  placeholder = '{{usuario.first_name}}'>
+                </div>
+                <div class="form_2">
+                    <label for="last_name">last name</label>
+                    <input type="text" name="last_name" required placeholder="{{usuario.last_name}}">
+                </div>
+                <div class="form_3">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" required placeholder="{{usuario.email}}">
+                </div>
+                <div class="button">
+                    <button type="submit">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

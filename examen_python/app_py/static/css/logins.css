@@ -1,0 +1,28 @@
+.main{
+display: flex;
+justify-content: space-between;
+padding: 30px;
+}
+
+.login{
+    margin-left: 100px;
+    width: 300px;  
+}
+
+.registro{
+    width: 300px;
+}
+
+.inplab{
+    display: flex;
+    justify-content: space-between;
+}
+
+.button1{
+    margin-left: 170px;
+}
+
+.button2{
+    margin-left: 170px;
+}
+
